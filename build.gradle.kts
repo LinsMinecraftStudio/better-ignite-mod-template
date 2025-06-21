@@ -1,5 +1,6 @@
 plugins {
   id("mod.base-conventions")
+  id("io.github.gliczdev.access-widen") version "1.0.0"
 }
 
 dependencies {
@@ -10,4 +11,10 @@ dependencies {
   compileOnly(libs.mixinExtras)
 
   paperweight.paperDevBundle(libs.versions.paper)
+
+  accessWiden("io.papermc.paper:paper-server:userdev-${libs.versions.paper.get()}")
+}
+
+accessWideners {
+  files.from("./src/main/resources/example_mod.accesswidener")
 }

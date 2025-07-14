@@ -18,3 +18,7 @@ dependencies {
 accessWideners {
   files.from("./src/main/resources/example_mod.accesswidener")
 }
+
+tasks.build {
+  dependOn(tasks.applyAccessWideners)
+}

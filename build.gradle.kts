@@ -20,5 +20,5 @@ accessWideners {
 }
 
 tasks.build {
-  dependOn(tasks.applyAccessWideners)
+  dependsOn(tasks.applyAccessWideners)
 }

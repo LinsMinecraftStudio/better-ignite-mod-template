@@ -4,12 +4,14 @@ plugins {
 }
 
 dependencies {
-  remapper("net.fabricmc:tiny-remapper:0.10.4:fat")
+  paperweight.paperDevBundle(libs.versions.paper)
 
   compileOnly(libs.ignite)
   compileOnly(libs.mixin)
   compileOnly(libs.mixinExtras)
 
+  annotationProcessor(libs.mixinExtras)
+  
   paperweight.paperDevBundle(libs.versions.paper)
 
   accessWiden("io.papermc.paper:paper-server:userdev-${libs.versions.paper.get()}")
